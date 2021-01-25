@@ -1,0 +1,63 @@
+﻿  main.cpp
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(7): error C2059: syntax error: '<'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(31): note: see reference to class template instantiation 'GAM345::Vector<T>' being compiled
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(7): error C2039: 'Vector': is not a member of '`global namespace''
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(7): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(11): error C2059: syntax error: '<'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(11): error C2523: '::~Vector': destructor tag mismatch
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(11): error C2039: 'Vector': is not a member of '`global namespace''
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(11): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(15): error C2059: syntax error: '<'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(15): error C2039: 'push_back': is not a member of '`global namespace''
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(15): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(19): error C2059: syntax error: '<'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(19): error C2039: 'resize': is not a member of '`global namespace''
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(19): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(23): error C2059: syntax error: '<'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(23): error C2039: 'reserve': is not a member of '`global namespace''
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(23): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(22): error C2039: 'resize': is not a member of 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(25): error C2248: 'GAM345::Vector<TestElement>::size': cannot access private member declared in class 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(28): note: see declaration of 'GAM345::Vector<TestElement>::size'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(25): error C2064: term does not evaluate to a function taking 0 arguments
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(27): error C2676: binary '[': 'GAM345::Vector<TestElement>' does not define this operator or a conversion to a type acceptable to the predefined operator
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(31): error C2248: 'GAM345::Vector<TestElement>::size': cannot access private member declared in class 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(28): note: see declaration of 'GAM345::Vector<TestElement>::size'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(31): error C2064: term does not evaluate to a function taking 0 arguments
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(33): error C2676: binary '[': 'GAM345::Vector<TestElement>' does not define this operator or a conversion to a type acceptable to the predefined operator
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(37): error C2248: 'GAM345::Vector<TestElement>::size': cannot access private member declared in class 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(28): note: see declaration of 'GAM345::Vector<TestElement>::size'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(37): error C2064: term does not evaluate to a function taking 0 arguments
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(39): error C2676: binary '[': 'GAM345::Vector<TestElement>' does not define this operator or a conversion to a type acceptable to the predefined operator
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(43): error C2039: 'reserve': is not a member of 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(45): error C2039: 'resize': is not a member of 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(48): error C2248: 'GAM345::Vector<TestElement>::size': cannot access private member declared in class 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(28): note: see declaration of 'GAM345::Vector<TestElement>::size'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(48): error C2064: term does not evaluate to a function taking 0 arguments
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(50): error C2676: binary '[': 'GAM345::Vector<TestElement>' does not define this operator or a conversion to a type acceptable to the predefined operator
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(56): error C2039: 'push_back': is not a member of 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(60): error C2248: 'GAM345::Vector<TestElement>::size': cannot access private member declared in class 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(28): note: see declaration of 'GAM345::Vector<TestElement>::size'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(60): error C2064: term does not evaluate to a function taking 0 arguments
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(62): error C2676: binary '[': 'GAM345::Vector<TestElement>' does not define this operator or a conversion to a type acceptable to the predefined operator
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(66): error C2039: 'empty': is not a member of 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(69): error C2248: 'GAM345::Vector<TestElement>::capacity': cannot access private member declared in class 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\gam345vector.h(29): note: see declaration of 'GAM345::Vector<TestElement>::capacity'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(69): error C2064: term does not evaluate to a function taking 0 arguments
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(72): error C2039: 'remove': is not a member of 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(76): error C2039: 'insert': is not a member of 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
+c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(79): error C2039: 'clear': is not a member of 'GAM345::Vector<TestElement>'
+  c:\users\jerem\gam-345-jeremiah-le\lab 1\lab 1\main.cpp(19): note: see declaration of 'GAM345::Vector<TestElement>'
