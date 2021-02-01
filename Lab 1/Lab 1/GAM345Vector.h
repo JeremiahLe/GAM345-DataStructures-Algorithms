@@ -101,23 +101,39 @@ namespace GAM345 {
 						newVector[i] = data[i];
 					}
 				}
-					size--;
+					m_size--;
 			}
+
 
 			void insert(T, int index)
 			{
 				if (index < m_capacity)
 				{
-
+					for (int i = 0; i < m_size; i++) {
+						if (i >= index)
+						{
+							data[index] = T();
+						}
+					}
 				}
 				else {
+					m_capacity *= 2;
+					T* newVector = reinterpret_cast<T*>(new char[sizeof(T) * m_capacity]);
+					for (int i = 0; i < m_size; i++) {
+						newVector[i] = data[i];
+					}
 
-				}
-				size++;
+					delete[] data;
+
+					data = newVector;
+					data[index] = T();
+					}
+				m_size++;
 			}
 
 			void clear() {
 				m_size = 0;
+				delete[] data;
 			}
 
 		private:

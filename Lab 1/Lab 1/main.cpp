@@ -56,6 +56,8 @@ int main(int argc, char **argv)
 		testVector.push_back(TestElement());
 	}
 
+	std::cout << "Break" << std::endl; //**
+
 	// Print each element's id
 	for (int i = 0; i < testVector.size(); i++)
 	{
@@ -71,9 +73,25 @@ int main(int argc, char **argv)
 	// This function should remove the element at the given position
 	testVector.remove(0);
 
+	std::cout << "Break" << std::endl; //**
+
+	// Print each element's id
+	for (int i = 0; i < testVector.size(); i++)
+	{
+		std::cout << testVector[i].elementId << std::endl;
+	}
+
 	TestElement newElement;
 	// This function should insert newElement at position 5 in the array
 	testVector.insert(newElement, 5);
+
+	std::cout << "Break" << std::endl; //**
+
+	// Print each element's id **
+	for (int i = 0; i < testVector.size(); i++)
+	{
+		std::cout << testVector[i].elementId << std::endl;
+	}
 
 	// Finally, clear the vector
 	testVector.clear();
