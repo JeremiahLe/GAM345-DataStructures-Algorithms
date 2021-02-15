@@ -22,8 +22,8 @@ namespace GAM345
 				}
 			}
 
-		private:
-			T* data;
+		
+			T data;
 			Node<T>* next;
 		};
 
@@ -40,33 +40,31 @@ namespace GAM345
 
 		void insert(T element, int aIndex) {
 
-			if (m_size == 0) { // insert with nothing
-				head->data = element; // set pointer of head to first element
-				m_size++;
-			}
-			else if (aIndex == 0) { // insert at first position
-				Node* temp = new Node();
+			if (aIndex == 0) { // insert at first position
+				Node<T>* temp = new Node<T>();
 				temp->data = element;
 				temp->next = head;
 				head = temp;
 				m_size++;
 			}
-			else {
+			else { // insert at some position
+				Node<T>* temp = new Node<T>();
+				temp->data = element;
+				temp->next = nullptr;
+
+				Node<T>* iterator = head;
+				Node<T>* previous = nullptr;
 
 				int i = 0;
 
-				while (i < aIndex) 
-				{
-					temp = temp->next;
+				while (i < aIndex) {
+					previous = iterator;
+					iterator = iterator->next;
 					i++;
 				}
-
-				Node* temp = new Node();
-				temp->data = element;
-				temp->next = head;
-				head = temp;
+			
+				temp->next = temp;
 				m_size++;
-
 			}
 		}
 
@@ -78,10 +76,17 @@ namespace GAM345
 			// m_size--;
 		}
 
+		/*
 		// iterate through list
-		T&operator[](int aIndex) {
-			return *(data + aIndex);
+		T& operator[](int aIndex) {
+			Node* temp = new Node();
+			int i = 0;
+			while (i < aIndex) {
+				temp = temp->next;
+			}
+			return *(temp->data + aIndex);
 		}
+		*/
 
 
 		void clear() {
@@ -90,13 +95,12 @@ namespace GAM345
 		}
 
 		int size() {
-			return m_size();
+			return m_size;
 		}
 
 	private:
 		Node<T>* head;
 		int m_size;
-
 	};
 
 
