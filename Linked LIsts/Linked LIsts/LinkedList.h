@@ -6,58 +6,87 @@ namespace GAM345
 	
 	public:
 
+		template<typename T>
 		class Node
 		{
 		public:
 			Node() {
-				data = reinterpret_cast<T*>(new char[sizeof(Node)]);
-				m_size++;
+				//data = reinterpret_cast<T*>(new char[sizeof(Node)]);
+				next = nullptr;
+				//m_size++;
+			}
+
+			~Node() {
+				if (next != nullptr) {
+
+				}
 			}
 
 		private:
 			T* data;
-			Node* next;
+			Node<T>* next;
 		};
 
 
 		LinkedList() {
-			Node* temp = new Node();
-			temp->data = 2;
-			temp->next = NULL;
-			head = temp;
+			head = nullptr;
+			m_size = 0;
 		}
 
 		~LinkedList(){
-
+			clear();
 		}
 
 
 		void insert(T element, int aIndex) {
-			if (aIndex < m_size) {
 
+			if (m_size == 0) { // insert with nothing
+				head->data = element; // set pointer of head to first element
+				m_size++;
+			}
+			else if (aIndex == 0) { // insert at first position
+				Node* temp = new Node();
+				temp->data = element;
+				temp->next = head;
+				head = temp;
+				m_size++;
+			}
+			else {
+
+				int i = 0;
+
+				while (i < aIndex) 
+				{
+					temp = temp->next;
+					i++;
+				}
+
+				Node* temp = new Node();
+				temp->data = element;
+				temp->next = head;
+				head = temp;
+				m_size++;
 
 			}
-			if (head == NULL) {
-
-
-			}
-
-			Node* temp = new Node(); // create new node
-			temp->data = element; // set node's data to variable
-			temp->next = head; // set node's link to current head
-			head = temp; // set head node to newly created node
 		}
 
 		void erase(int aIndex) {
+			// erase at index 0
 
+			// index < m_size
+			// iterate, are we at tail? then delete node. If not two temps (current and previous node) previous is last node; current is eventually deleted.
+			// m_size--;
 		}
 
+		// iterate through list
 		T&operator[](int aIndex) {
 			return *(data + aIndex);
 		}
 
-		void clear() {
 
+		void clear() {
+			// erase at index 0
+			// 
 		}
 
 		int size() {
@@ -65,8 +94,10 @@ namespace GAM345
 		}
 
 	private:
-		Node* head;
+		Node<T>* head;
 		int m_size;
 
 	};
+
+
 }
