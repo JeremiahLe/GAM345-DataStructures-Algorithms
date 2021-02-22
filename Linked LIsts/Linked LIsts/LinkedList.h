@@ -18,15 +18,13 @@ namespace GAM345
 
 			~Node() {
 				if (next != nullptr) {
-
+					//
 				}
 			}
 
-		
 			T data;
 			Node<T>* next;
 		};
-
 
 		LinkedList() {
 			head = nullptr;
@@ -36,7 +34,6 @@ namespace GAM345
 		~LinkedList(){
 			clear();
 		}
-
 
 		void insert(T element, int aIndex) {
 
@@ -69,33 +66,58 @@ namespace GAM345
 		}
 
 		void erase(int aIndex) {
-			// erase at index 0
+
+			Node<T>* temp = head;
+			Node<T>* previous = nullptr;
+
+			if (aIndex == 0) {
+				head = temp->next;   
+				free(temp);          
+				return;
+			}
+
+			for (int i = 0; temp != NULL && i < aIndex - 1; i++)
+				temp = temp->next;
+
+			if (temp == NULL || temp->next == NULL)
+				return;
+
+			Node<T> *next = temp->next->next;
+
+			free(temp->next); 
+			temp->next = next;
+			m_size--;
 
 			// index < m_size
 			// iterate, are we at tail? then delete node. If not two temps (current and previous node) previous is last node; current is eventually deleted.
 			// m_size--;
 		}
 
-		/*
-		// iterate through list
 		T& operator[](int aIndex) {
-			Node* temp = new Node();
-			int i = 0;
-			while (i < aIndex) {
-				temp = temp->next;
-			}
-			return *(temp->data + aIndex);
-		}
-		*/
+			Node<T>* current = head;
 
+			while (current != nullptr && aIndex-- > 0)
+			{
+				current = current->next;
+			}
+			return (current->data);
+		}
+		
 
 		void clear() {
-			// erase at index 0
-			// 
+			int i = 0;
+			while (i < m_size) {
+				erase(i);
+				i++;
+			}
 		}
 
 		int size() {
 			return m_size;
+		}
+
+		T returnHead() {
+			return head;
 		}
 
 	private:
