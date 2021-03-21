@@ -8,8 +8,7 @@
 
 int main()
 {
-	
-	int array[5];
+	int array[6];
 	int *p;
 	p = array;
 
@@ -18,37 +17,39 @@ int main()
 	p = &array[2]; *p = 25;
 	p = &array[3]; *p = 10;
 	p = &array[4]; *p = 1; // value 1 is here
+	p = &array[5]; *p = 43;
 
-	for (int i = 0; i < 5; i++)
-		std::cout << array[i] << ", ";
+	for (int i = 0; i < 6; i++)
+		std::cout << array[i] << " ";
 
-	GAM345::SequentialSearch(array, 5, 1); // value "1" found!
+	GAM345::SequentialSearch(array, 6, 1); // value "1" found!
 
 	p = &array[4]; *p = 6; // change address holding 1 to something else
 
-	for (int i = 0; i < 5; i++)
-		std::cout << array[i] << ", ";
+	for (int i = 0; i < 6; i++)
+		std::cout << array[i] << " ";
 
-	GAM345::SequentialSearch(array, 5, 1); // value "1" not found!
+	GAM345::SequentialSearch(array, 6, 1); // value "1" not found!
 
-	GAM345::InsertionSort(array, 5);
+	std::cout << std::endl;
 
-	for (int i = 0; i < 5; i++)
-		std::cout << array[i] << ", ";
-	
-	
-	int newArray[2];
-	int*ptr;
-	ptr = newArray;
+	GAM345::InsertionSort(array, 6);
 
-	ptr = &newArray[0]; *ptr = 1;
-	ptr = &newArray[1]; *ptr = 0;
+	std::cout << "Insertion Sort: ";
 
-	GAM345::InsertionSort(newArray, 2); 
+	for (int i = 0; i < 6; i++)
+		std::cout << array[i] << " ";
 
-	for (int i = 0; i < 2; i++)
-		std::cout << newArray[i] << ", "; 
-		
+	std::cout << std::endl;
+
+	std::cout << "Merge Sort: ";
+
+	GAM345::MergeSort(array, 6);
+
+	for (int i = 0; i < 6; i++)
+		std::cout << array[i] << " ";
+
+	std::cout << std::endl;
 
 };
 
