@@ -18,6 +18,7 @@ int main()
 	p = &array[3]; *p = 10;
 	p = &array[4]; *p = 1; // value 1 is here
 	p = &array[5]; *p = 43;
+	p = &array[6]; *p = 12;
 
 	for (int i = 0; i < 6; i++)
 		std::cout << array[i] << " ";
@@ -50,7 +51,38 @@ int main()
 		std::cout << array[i] << " ";
 
 	std::cout << std::endl;
+	std::cout << std::endl;
 
+	int newArray[] = { 1, 2, 3, 4, 5, 6 };
+	int value = 6;
+	int bsResult = GAM345::BinarySearch(newArray, 6, value);
+
+	for (int i = 0; i < 6; i++)
+		std::cout << newArray[i] << " ";
+
+	std::cout << std::endl;
+
+	if (bsResult == -1)
+		std::cout << "Value " << value << " not found!";
+	else
+		std::cout << "Value " << value << " found at index " << bsResult;
+
+	value = 7;
+	bsResult = GAM345::BinarySearch(newArray, 6, value);
+
+	std::cout << std::endl;
+
+	for (int i = 0; i < 6; i++)
+		std::cout << newArray[i] << " ";
+
+	std::cout << std::endl;
+
+	if (bsResult == -1)
+		std::cout << "Value " << value << " not found!";
+	else
+		std::cout << "Value " << value << " found at index " << bsResult;
+
+	std::cout << std::endl;
 };
 
 

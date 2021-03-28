@@ -81,7 +81,7 @@ namespace GAM345 {
 	}
 
 	void MergeSort(int *aArray, int aSize) {
-		if (aSize <= 2)
+		if (aSize <= 1)
 			return;
 		if (aSize > 2) {
 			// Divide the data in half
@@ -97,13 +97,82 @@ namespace GAM345 {
 			merge(aArray, halfSize, aArray + halfSize, halfSize);
 		}
 	}
-	
-	/*
 
-	int BinarySearch(int *aArray, int value) {
+
+	int BinarySearch(int *aArray, int aSize, int value){
+
+		int left = aArray[0]; // first element
+		int right = aArray[aSize - 1]; // last element
+
+		while (left <= right) {
+
+			int midpoint = left + (right - left) / 2; // split the data in half
+
+			if (aArray[midpoint] == value) // if the current middle index is the value, return index
+				return midpoint;
+
+			if (aArray[midpoint] < value) // otherwise, if value is greater than current middle index, check right side
+				left = midpoint + 1;
+			else
+				right = midpoint - 1; // value is smaller than current middle index, check left side
+		}
+		return -1; // value not found
+	}
+	
+
+	int Partition(int *aArray, int low, int high) {
 
 	}
 
+	void QuickSort(int *a, int low, int high) {
+
+	}
+
+	/*
+	void mergeAbilities(AbilityChain *first, AbilityChain *second) {
+
+		int firstIndex = 0;
+		int secondIndex = 0;
+
+		AbilityChain* currentFirst = first;
+		AbilityChain* currentSecond = second;
+
+		while (currentFirst != nullptr && currentSecond != nullptr)
+		{
+			if (currentFirst->level < currentSecond->level) {
+				first[firstIndex] = currentFirst->level;
+				firstIndex++;
+				currentFirst = currentFirst->next;
+			}
+			else
+			{
+				second[secondIndex] = currentSecond->level;
+				secondIndex++;
+				currentSecond = currentSecond->next;
+			}
+
+		}
+	}
+	*/
+
+	/*
+	void MergeAbility(int *aArray, int *Array2, int aSize, int aSize2) {
+
+		int firstIndex = 0;
+		int secondIndex = 0;
+
+		while (firstIndex < aSize && secondIndex < aSize2) {
+			if (aArray[firstIndex] < Array2[secondIndex]) {
+				aArray[firstIndex] = aArray[firstIndex];
+				firstIndex++;
+			}
+			else
+			{
+				aArray[firstIndex] = Array2[secondIndex];
+				secondIndex++;
+			}
+		}
+	}
 	*/
 	
 };
