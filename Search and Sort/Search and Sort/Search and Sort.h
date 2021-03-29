@@ -122,10 +122,48 @@ namespace GAM345 {
 
 	int Partition(int *aArray, int low, int high) {
 
+		// 3, 6, 5, 1, 2, 4
+
+		int pivot = aArray[high]; // set the pivot to the last element // 4
+		int pivotIndex = high; // last index // 5
+		int i = low; // while loop
+
+		while (i < pivotIndex) { // while 0 < 5
+ 			if (aArray[i] < pivot) {
+				i++; // number doesn't need to be swapped
+			}
+			else // current array[i] > pivot (6 > 4)
+			{
+				// 3 way swap
+				int lastPivotIndex = pivotIndex; // keep track of where the pivot was // lastpivotindex = [5]
+				int kickedToLeft = aArray[pivotIndex - 1]; // keep track of number that is replaced by pivot // int kickedtoleft = 2 ([4])
+
+				aArray[pivotIndex - 1] = aArray[pivotIndex]; // move the pivot left one //  2 [4] = 4 [5] // 3, -6-, 5, 1, 4, [4]
+				aArray[lastPivotIndex] = aArray[i]; // move the larger number to where the pivot was // 4 [5] = 6 [1] // 3, -6-, 5, 1, [4], -6-
+				aArray[i] = kickedToLeft; // kick the number replaced by the pivot all the way down to where the larger number was // 6 [1] = 2 [4] // 3, 2, 5, 1, [4], -6-
+				i++; // 3, 2, 5, 1, [4], 6
+
+				// 2 way quick swap
+				if (aArray[i] < aArray[i - 1]) { // if 2 < 3
+					int temp = aArray[i]; // set temp to [1] (2)
+					aArray[i] = aArray[i - 1]; // set [1] to [1 - 1] (3)
+					aArray[i - 1] = temp; // set [0] to temp (2)
+				}
+			}
+		}
+		return pivotIndex;
 	}
 
-	void QuickSort(int *a, int low, int high) {
+	void QuickSort(int *aArray, int low, int high) {
+		if (low < high) { // base case
 
+			int partIndex = Partition(aArray, low, high);
+
+			QuickSort(aArray, partIndex + 1, high);
+
+			QuickSort(aArray, low, partIndex - 1);
+
+		}
 	}
 
 	/*

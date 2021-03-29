@@ -8,6 +8,8 @@
 
 int main()
 {
+	std::cout << "Sequential Search:" << std::endl;
+
 	int array[6];
 	int *p;
 	p = array;
@@ -52,6 +54,7 @@ int main()
 
 	std::cout << std::endl;
 	std::cout << std::endl;
+	std::cout << "Binary Search:" << std::endl;
 
 	int newArray[] = { 1, 2, 3, 4, 5, 6 };
 	int value = 6;
@@ -67,7 +70,7 @@ int main()
 	else
 		std::cout << "Value " << value << " found at index " << bsResult;
 
-	value = 7;
+	value = 20;
 	bsResult = GAM345::BinarySearch(newArray, 6, value);
 
 	std::cout << std::endl;
@@ -81,6 +84,25 @@ int main()
 		std::cout << "Value " << value << " not found!";
 	else
 		std::cout << "Value " << value << " found at index " << bsResult;
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	int newArray2[] = { 1, 20, 14, 56, 44, 6 };
+	int low = newArray2[0];
+	int high = newArray2[5];
+
+	std::cout << "Before QuickSort: ";
+	for (int i = 0; i < 6; i++)
+		std::cout << newArray2[i] << " ";
+
+	std::cout << std::endl;
+
+	GAM345::QuickSort(newArray2, 0, 5);
+
+	std::cout << "After QuickSort: ";
+	for (int i = 0; i < 6; i++)
+		std::cout << newArray2[i] << " ";
 
 	std::cout << std::endl;
 };
