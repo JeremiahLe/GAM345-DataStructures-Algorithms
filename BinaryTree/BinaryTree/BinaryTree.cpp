@@ -34,6 +34,7 @@ void BinaryTree::DeleteNodes() {
 		}
 		else {
 			delete current; // delete mRoot
+			delete mRoot;
 			return; 
 		}
 	}
